@@ -73,7 +73,6 @@ public class HBaseCoprocessor extends BaseRegionObserver {
 						
 						p.addColumn(Bytes.toBytes("control"), Bytes.toBytes("data"), 
 								Bytes.toBytes(new SimpleDateFormat("yyyyymmddhhmmss").format(new Date())));
-						p.addColumn(Bytes.toBytes("control"), Bytes.toBytes("operacao"), Bytes.toBytes("D"));
 						tblog.put(p);
 					}
 					
